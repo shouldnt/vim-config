@@ -4,9 +4,6 @@ source ~/.config/nvim/key-map.vim
 filetype plugin on
 
 "set runtimepath^=~/.vim/bundle/ctrlp.vim
-autocmd Filetype json
-	    \ let g:indentLine_setConceal = 0 |
-	    \ let g:vim_json_syntax_conceal = 0
 set number relativenumber
 set ignorecase
 set shiftwidth=4
@@ -190,5 +187,9 @@ set cursorcolumn
 set cursorline
 " hi CursorColumn ctermfg=White ctermbg=Yellow cterm=bold guifg=white guibg=yellow gui=bold
 hi nCursor ctermfg=white ctermbg=black guifg=white guibg=yellow
+autocmd Filetype json let g:indentLine_setConceal = 0 | let g:vim_json_syntax_conceal = 0
+
+set conceallevel=0
+
 source ~/.config/nvim/startify-bookmark.vim
 source ~/.config/nvim/coc-config.vim
