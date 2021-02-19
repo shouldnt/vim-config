@@ -25,3 +25,6 @@ nmap <leader>u :UndotreeShow<CR>
 imap jj <ESC>
 imap <C-}> <C-T>
 imap <C-{> <C-D>
+
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
