@@ -5,8 +5,8 @@ filetype plugin on
 
 "set runtimepath^=~/.vim/bundle/ctrlp.vim
 autocmd Filetype json
-  \ let g:indentLine_setConceal = 0 |
-  \ let g:vim_json_syntax_conceal = 0
+	    \ let g:indentLine_setConceal = 0 |
+	    \ let g:vim_json_syntax_conceal = 0
 set number relativenumber
 set ignorecase
 set shiftwidth=4
@@ -22,39 +22,43 @@ hi CursorColumn ctermfg=White ctermbg=Yellow cterm=bold guifg=white guibg=yellow
 set encoding=UTF-8
 set autoindent
 set smartindent
+
 call plug#begin("~/.vim/plugged")
-    Plug 'ayu-theme/ayu-vim'
-    Plug 'yuezk/vim-js'
-    Plug 'maxmellon/vim-jsx-pretty'
-    Plug 'nvim-lua/popup.nvim'
-    Plug 'nvim-lua/plenary.nvim'
-    Plug 'nvim-telescope/telescope.nvim'
-    Plug 'https://github.com/easymotion/vim-easymotion'
-    Plug 'justinmk/vim-sneak'
-    Plug 'mhinz/vim-startify'
-    Plug 'preservim/nerdcommenter'
-    Plug 'mbbill/undotree'
-    Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' },
-    Plug 'https://github.com/unblevable/quick-scope'
-    Plug 'vimwiki/vimwiki'
-    Plug 'https://github.com/danro/rename.vim.git'
-    Plug 'https://github.com/jiangmiao/auto-pairs.git'
-    Plug 'https://github.com/kana/vim-textobj-user.git'
-    Plug 'https://github.com/kana/vim-textobj-line.git'
-    Plug 'https://github.com/tpope/vim-unimpaired.git'
-    Plug 'https://github.com/tmhedberg/matchit.git'
-    Plug 'https://github.com/tpope/vim-repeat.git'
-    Plug 'https://tpope.io/vim/surround.git'
-    Plug 'https://github.com/pangloss/vim-javascript.git'
-    Plug 'dracula/vim'
-    Plug 'preservim/nerdtree'
-    Plug 'honza/vim-snippets'
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'mattn/emmet-vim'
-    Plug 'vim-airline/vim-airline'
-    Plug 'https://github.com/Yggdroot/indentLine.git'
-    Plug 'ryanoasis/vim-devicons'
+
+Plug 'ayu-theme/ayu-vim'
+Plug 'yuezk/vim-js'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'https://github.com/easymotion/vim-easymotion'
+Plug 'justinmk/vim-sneak'
+Plug 'mhinz/vim-startify'
+Plug 'preservim/nerdcommenter'
+Plug 'mbbill/undotree'
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' },
+Plug 'https://github.com/unblevable/quick-scope'
+Plug 'vimwiki/vimwiki'
+Plug 'https://github.com/danro/rename.vim.git'
+Plug 'https://github.com/jiangmiao/auto-pairs.git'
+Plug 'https://github.com/kana/vim-textobj-user.git'
+Plug 'https://github.com/kana/vim-textobj-line.git'
+Plug 'https://github.com/tpope/vim-unimpaired.git'
+Plug 'https://github.com/tmhedberg/matchit.git'
+Plug 'https://github.com/tpope/vim-repeat.git'
+Plug 'https://tpope.io/vim/surround.git'
+Plug 'https://github.com/pangloss/vim-javascript.git'
+Plug 'dracula/vim'
+Plug 'preservim/nerdtree'
+Plug 'honza/vim-snippets'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'mattn/emmet-vim'
+Plug 'vim-airline/vim-airline'
+Plug 'https://github.com/Yggdroot/indentLine.git'
+Plug 'ryanoasis/vim-devicons'
+
 call plug#end()
+
 "Config Section
 if (has("termguicolors"))
     set termguicolors
@@ -62,6 +66,7 @@ endif
 syntax enable
 let ayucolor="dark"
 colorscheme ayu
+highlight Cursor guifg=white guibg=yellow
 
 xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
 
