@@ -23,6 +23,7 @@ set encoding=UTF-8
 set autoindent
 set smartindent
 call plug#begin("~/.vim/plugged")
+    Plug 'ayu-theme/ayu-vim'
     Plug 'yuezk/vim-js'
     Plug 'maxmellon/vim-jsx-pretty'
     Plug 'nvim-lua/popup.nvim'
@@ -59,7 +60,8 @@ if (has("termguicolors"))
     set termguicolors
 endif
 syntax enable
-colorscheme dracula
+let ayucolor="dark"
+colorscheme ayu
 
 xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
 
