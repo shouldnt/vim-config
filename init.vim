@@ -15,10 +15,6 @@ set noswapfile
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<
 set completeopt=menuone,noinsert,noselect
 hi TabLineFill term=bold cterm=bold ctermbg=1000
-set cursorcolumn
-hi CursorLine ctermbg=Yellow
-set cursorline
-hi CursorColumn ctermfg=White ctermbg=Yellow cterm=bold guifg=white guibg=yellow gui=bold
 set encoding=UTF-8
 set autoindent
 set smartindent
@@ -186,6 +182,13 @@ EOF
 nnoremap <leader>sv :source $MYVIMRC<CR>
 let g:NERDToggleCheckAllLines = 1
 " remove trailing when save
+"
+"
 autocmd BufWritePre * :%s/\s\+$//e
+
+set cursorcolumn
+set cursorline
+" hi CursorColumn ctermfg=White ctermbg=Yellow cterm=bold guifg=white guibg=yellow gui=bold
+hi nCursor ctermfg=white ctermbg=black guifg=white guibg=yellow
 source ~/.config/nvim/startify-bookmark.vim
 source ~/.config/nvim/coc-config.vim
