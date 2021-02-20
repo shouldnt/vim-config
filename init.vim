@@ -194,3 +194,4 @@ set conceallevel=0
 
 source ~/.config/nvim/startify-bookmark.vim
 source ~/.config/nvim/coc-config.vim
+source ~/.config/nvim/airline.vim
