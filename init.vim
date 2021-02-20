@@ -30,7 +30,7 @@ Plug 'mhinz/vim-startify'
 Plug 'preservim/nerdcommenter'
 Plug 'mbbill/undotree'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' },
-Plug 'https://github.com/unblevable/quick-scope'
+" Plug 'https://github.com/unblevable/quick-scope'
 Plug 'vimwiki/vimwiki'
 Plug 'https://github.com/danro/rename.vim.git'
 Plug 'https://github.com/jiangmiao/auto-pairs.git'
@@ -48,6 +48,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mattn/emmet-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'https://github.com/tpope/vim-fugitive.git'
 Plug 'https://github.com/Yggdroot/indentLine.git'
 Plug 'ryanoasis/vim-devicons'
 
