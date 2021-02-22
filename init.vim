@@ -4,7 +4,9 @@ source ~/.config/nvim/key-map.vim
 filetype plugin on
 
 "set runtimepath^=~/.vim/bundle/ctrlp.vim
-set number relativenumber
+" set synmaxcol=128
+" syntax sync minlines=256
+set number
 set ignorecase
 set shiftwidth=4
 set list
