@@ -6,6 +6,7 @@ filetype plugin on
 "set runtimepath^=~/.vim/bundle/ctrlp.vim
 " set synmaxcol=128
 " syntax sync minlines=256
+set hidden
 set number
 set ignorecase
 set shiftwidth=4
@@ -17,6 +18,20 @@ hi TabLineFill term=bold cterm=bold ctermbg=1000
 set encoding=UTF-8
 set autoindent
 set smartindent
+set lazyredraw
+set ruler
+set so=7
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Files, backups and undo
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Turn backup off, since most stuff is in SVN, git etc. anyway...
+set nobackup
+set nowb
+set noswapfile
+
+" Linebreak on 500 characters
+set lbr
+set tw=500
 
 call plug#begin("~/.vim/plugged")
 
