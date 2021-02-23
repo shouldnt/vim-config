@@ -33,6 +33,64 @@ set noswapfile
 set lbr
 set tw=500
 
+" allow multiple indentation/deindentation in visual mode
+vnoremap < <gv
+vnoremap > >gv
+
+" Speed up scrolling of the viewport slightly
+nnoremap <C-e> 2<C-e>
+nnoremap <C-y> 2<C-y>
+
+" Swap implementations of ` and ' jump to markers
+" By default, ' jumps to the marked line, ` jumps to the marked line and
+" column, so swap them
+nnoremap ' `
+nnoremap ` '
+
+" Use ,d (or ,dd or ,dj or 20,dd) to delete a line without adding it to the
+" yanked stack (also, in visual mode)
+nnoremap <silent> <leader>d "_d
+vnoremap <silent> <leader>d "_d
+
+" Clears the search register
+nnoremap <silent> <leader>/ :nohlsearch<CR>
+
+" Keep search matches in the middle of the window and pulse the line when moving
+" to them.
+nnoremap n n:call PulseCursorLine()<cr>
+nnoremap N N:call PulseCursorLine()<cr>
+" Pulse ------------------------------------------------------------------- {{{
+
+function! PulseCursorLine()
+    setlocal cursorline
+
+    redir => old_hi
+        silent execute 'hi CursorLine'
+    redir END
+    let old_hi = split(old_hi, '\n')[0]
+    let old_hi = substitute(old_hi, 'xxx', '', '')
+
+    hi CursorLine guibg=#3a3a3a
+    redraw
+    sleep 14m
+
+    hi CursorLine guibg=#4a4a4a
+    redraw
+    sleep 10m
+
+    hi CursorLine guibg=#3a3a3a
+    redraw
+    sleep 14m
+
+    hi CursorLine guibg=#2a2a2a
+    redraw
+    sleep 10m
+
+    execute 'hi ' . old_hi
+    setlocal nocursorline
+endfunction
+
+
 call plug#begin("~/.vim/plugged")
 
 Plug 'ayu-theme/ayu-vim'
