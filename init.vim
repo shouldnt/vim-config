@@ -55,6 +55,17 @@ vnoremap <silent> <leader>d "_d
 " Clears the search register
 nnoremap <silent> <leader>/ :nohlsearch<CR>
 
+" --- move around splits {
+" move to and maximize the below split
+map <C-J> <C-W>j<C-W>_
+" move to and maximize the above split
+map <C-K> <C-W>k<C-W>_
+" move to and maximize the left split
+nmap <c-h> <c-w>h<c-w><bar>
+" move to and maximize the right split
+nmap <c-l> <c-w>l<c-w><bar>
+" }
+
 " Keep search matches in the middle of the window and pulse the line when moving
 " to them.
 nnoremap n n:call PulseCursorLine()<cr>
