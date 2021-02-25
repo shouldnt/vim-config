@@ -12,9 +12,11 @@ set ignorecase
 set shiftwidth=4
 set list
 set noswapfile
-set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<
+set listchars=eol:¬,tab:..,trail:~,extends:>,precedes:<
+",tab:
 set completeopt=menuone,noinsert,noselect
 hi TabLineFill term=bold cterm=bold ctermbg=1000
+
 set encoding=UTF-8
 set autoindent
 set smartindent
@@ -64,6 +66,8 @@ map <C-K> <C-W>k<C-W>_
 nmap <c-h> <c-w>h<c-w><bar>
 " move to and maximize the right split
 nmap <c-l> <c-w>l<c-w><bar>
+nnoremap <silent> <Leader>+ :exe "resize " . (winwidth(0) * 3/2)<CR>
+nnoremap <silent> <Leader>- :exe "resize " . (winwidth(0) * 2/3)<CR>
 " }
 
 " Keep search matches in the middle of the window and pulse the line when moving
@@ -103,7 +107,7 @@ endfunction
 
 
 call plug#begin("~/.vim/plugged")
-
+Plug 'https://github.com/tpope/vim-sleuth.git'
 Plug 'ayu-theme/ayu-vim'
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
@@ -283,3 +287,4 @@ source ~/.config/nvim/startify-bookmark.vim
 source ~/.config/nvim/coc-config.vim
 source ~/.config/nvim/airline.vim
 source ~/.config/nvim/command.vim
+source ~/.config/nvim/colors.vim
