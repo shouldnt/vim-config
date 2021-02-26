@@ -10,10 +10,9 @@ set hidden
 set number
 set ignorecase
 set shiftwidth=4
+set tabstop=4
 set list
-set noswapfile
 set listchars=eol:¬,tab:..,trail:~,extends:>,precedes:<
-",tab:
 set completeopt=menuone,noinsert,noselect
 hi TabLineFill term=bold cterm=bold ctermbg=1000
 
@@ -135,7 +134,7 @@ Plug 'dracula/vim'
 Plug 'preservim/nerdtree'
 Plug 'honza/vim-snippets'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'mattn/emmet-vim'
+" Plug 'mattn/emmet-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'https://github.com/tpope/vim-fugitive.git'
@@ -227,7 +226,8 @@ autocmd FileType xml setlocal shiftwidth=4 softtabstop=2 expandtab
 autocmd FileType javascriptreact setlocal shiftwidth=4 tabstop=2 softtabstop=2 expandtab
 
 "emmet setting
-let g:user_emmet_leader_key=','
+" let g:user_emmet_mode='n'
+" let g:user_emmet_leader_key=' '
 
 
 " Add spaces after comment delimiters by default
@@ -268,6 +268,7 @@ sorting_strategy = "ascending"
 }
 }
 EOF
+
 nnoremap <leader>sv :source $MYVIMRC<CR>
 let g:NERDToggleCheckAllLines = 1
 " remove trailing when save
@@ -275,10 +276,6 @@ let g:NERDToggleCheckAllLines = 1
 "
 autocmd BufWritePre * :%s/\s\+$//e
 
-set cursorcolumn
-set cursorline
-" hi CursorColumn ctermfg=White ctermbg=Yellow cterm=bold guifg=white guibg=yellow gui=bold
-hi nCursor ctermfg=white ctermbg=black guifg=white guibg=yellow
 autocmd Filetype json let g:indentLine_setConceal = 0 | let g:vim_json_syntax_conceal = 0
 
 set conceallevel=0

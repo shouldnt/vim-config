@@ -20,7 +20,7 @@ nmap <leader>h <C-w>h
 nmap <leader>j <C-w>j
 nmap <leader>k <C-w>k
 nmap <leader>l <C-w>l
-nmap <leader>u :UndotreeShow<CR>
+nmap <leader>u :UndotreeToggle<CR>
 
 imap jj <ESC>
 imap <C-}> <C-T>
