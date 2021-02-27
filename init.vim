@@ -224,6 +224,8 @@ autocmd FileType javascript setlocal shiftwidth=4 tabstop=2 softtabstop=2 expand
 autocmd FileType typescript setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 autocmd FileType xml setlocal shiftwidth=4 softtabstop=2 expandtab
 autocmd FileType javascriptreact setlocal shiftwidth=4 tabstop=2 softtabstop=2 expandtab
+"move quick fix window to the right when it open
+autocmd FileType qf wincmd L
 
 "emmet setting
 " let g:user_emmet_mode='n'
