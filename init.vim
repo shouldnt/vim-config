@@ -69,41 +69,6 @@ nnoremap <silent> <Leader>+ :exe "resize " . (winwidth(0) * 3/2)<CR>
 nnoremap <silent> <Leader>- :exe "resize " . (winwidth(0) * 2/3)<CR>
 " }
 
-" Keep search matches in the middle of the window and pulse the line when moving
-" to them.
-nnoremap n n:call PulseCursorLine()<cr>
-nnoremap N N:call PulseCursorLine()<cr>
-" Pulse ------------------------------------------------------------------- {{{
-
-function! PulseCursorLine()
-    setlocal cursorline
-
-    redir => old_hi
-        silent execute 'hi CursorLine'
-    redir END
-    let old_hi = split(old_hi, '\n')[0]
-    let old_hi = substitute(old_hi, 'xxx', '', '')
-
-    hi CursorLine guibg=#3a3a3a
-    redraw
-    sleep 14m
-
-    hi CursorLine guibg=#4a4a4a
-    redraw
-    sleep 10m
-
-    hi CursorLine guibg=#3a3a3a
-    redraw
-    sleep 14m
-
-    hi CursorLine guibg=#2a2a2a
-    redraw
-    sleep 10m
-
-    execute 'hi ' . old_hi
-    setlocal nocursorline
-endfunction
-
 
 call plug#begin("~/.vim/plugged")
 Plug 'https://github.com/tpope/vim-sleuth.git'
