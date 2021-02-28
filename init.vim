@@ -108,6 +108,9 @@ Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
+" auto pair fly mode
+let g:AutoPairsFlyMode = 0
+
 "Config Section
 if (has("termguicolors"))
     set termguicolors
