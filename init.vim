@@ -6,6 +6,7 @@ filetype plugin on
 "set runtimepath^=~/.vim/bundle/ctrlp.vim
 " set synmaxcol=128
 " syntax sync minlines=256
+set encoding=utf-8
 set hidden
 set number
 set ignorecase
@@ -71,6 +72,7 @@ nnoremap <silent> <Leader>- :exe "resize " . (winwidth(0) * 2/3)<CR>
 
 
 call plug#begin("~/.vim/plugged")
+Plug 'mattn/emmet-vim'
 Plug 'https://github.com/tpope/vim-sleuth.git'
 Plug 'ayu-theme/ayu-vim'
 Plug 'yuezk/vim-js'
@@ -195,9 +197,6 @@ autocmd FileType javascriptreact setlocal shiftwidth=4 tabstop=2 softtabstop=2 e
 "move quick fix window to the right when it open
 autocmd FileType qf wincmd L
 
-"emmet setting
-" let g:user_emmet_mode='n'
-" let g:user_emmet_leader_key=' '
 
 
 " Add spaces after comment delimiters by default
@@ -255,3 +254,5 @@ source ~/.config/nvim/coc-config.vim
 source ~/.config/nvim/airline.vim
 source ~/.config/nvim/command.vim
 source ~/.config/nvim/colors.vim
+source ~/.config/nvim/emmet.vim
+source ~/.config/nvim/BufOnly.vim
