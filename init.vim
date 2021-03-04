@@ -23,6 +23,9 @@ set smartindent
 set lazyredraw
 set ruler
 set so=7
+
+" ignore node_modules when search
+set wildignore+=*/node_modules/*
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

@@ -4,11 +4,11 @@ let mapleader = " "
 "nmap <leader>f <C-^>
 "copy content to system clipboard (like ctrl + c)
 "
-xnoremap <leader>y "+y
-noremap <leader>y "+y
-noremap <leader>Y "+Y
-noremap <leader>p "+p
-noremap <leader>P "+P
+xnoremap <leader>y "*y
+noremap <leader>y "*y
+noremap <leader>Y "*Y
+noremap <leader>p "*p
+noremap <leader>P "*P
 
 "disable arrow keys
 noremap <Up> <Nop>
