@@ -22,7 +22,8 @@ set autoindent
 set smartindent
 set lazyredraw
 set ruler
-set so=7
+let g:scroll_off_value=7
+let &so=g:scroll_off_value
 
 " ignore node_modules when search
 set wildignore+=*/node_modules/*
@@ -259,3 +260,4 @@ source ~/.config/nvim/command.vim
 source ~/.config/nvim/colors.vim
 source ~/.config/nvim/emmet.vim
 source ~/.config/nvim/BufOnly.vim
+source ~/.config/nvim/fn.vim
