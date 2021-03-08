@@ -11,10 +11,10 @@ noremap <leader>p "*p
 noremap <leader>P "*P
 
 "disable arrow keys
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
+nnoremap <Up> :resize +2<CR>
+nnoremap <Down> :resize -2<CR>
+nnoremap <Left> :vertical resize +2<CR>
+nnoremap <Right> :vertical resize -2<CR>
 
 nmap <leader>h <C-w>h
 nmap <leader>j <C-w>j
