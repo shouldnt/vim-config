@@ -76,6 +76,7 @@ nnoremap <silent> <Leader>- :exe "resize " . (winwidth(0) * 2/3)<CR>
 
 
 call plug#begin("~/.vim/plugged")
+Plug 'mfussenegger/nvim-dap'
 Plug 'mattn/emmet-vim'
 Plug 'https://github.com/tpope/vim-sleuth.git'
 Plug 'ayu-theme/ayu-vim'
