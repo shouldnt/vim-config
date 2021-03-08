@@ -262,3 +262,4 @@ source ~/.config/nvim/colors.vim
 source ~/.config/nvim/emmet.vim
 source ~/.config/nvim/BufOnly.vim
 source ~/.config/nvim/fn.vim
+source ~/.config/nvim/dart.vim
