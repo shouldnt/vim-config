@@ -35,9 +35,11 @@ set nobackup
 set nowb
 set noswapfile
 
-" Linebreak on 500 characters
-set lbr
-set tw=500
+" " Linebreak on 500 characters
+" set lbr
+" set tw=500
+set nowrap linebreak textwidth=0
+set virtualedit=insert
 
 " allow multiple indentation/deindentation in visual mode
 vnoremap < <gv
