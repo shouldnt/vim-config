@@ -24,6 +24,7 @@ set lazyredraw
 set ruler
 let g:scroll_off_value=7
 let &so=g:scroll_off_value
+set showmatch
 
 " ignore node_modules when search
 set wildignore+=*/node_modules/*
@@ -78,8 +79,10 @@ nnoremap <silent> <Leader>- :exe "resize " . (winwidth(0) * 2/3)<CR>
 
 
 call plug#begin("~/.vim/plugged")
+Plug 'SirVer/ultisnips'
+Plug 'mlaursen/vim-react-snippets'
 Plug 'mfussenegger/nvim-dap'
-Plug 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim', { 'for': ['javascript', 'javascriptreact','javascript.jsx', 'html', 'css'] }
 Plug 'https://github.com/tpope/vim-sleuth.git'
 Plug 'ayu-theme/ayu-vim'
 Plug 'yuezk/vim-js'
@@ -201,6 +204,9 @@ autocmd FileType javascript setlocal shiftwidth=4 tabstop=2 softtabstop=2 expand
 autocmd FileType typescript setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 autocmd FileType xml setlocal shiftwidth=4 softtabstop=2 expandtab
 autocmd FileType javascriptreact setlocal shiftwidth=4 tabstop=2 softtabstop=2 expandtab
+
+autocmd bufnewfile,bufread *.jsx set filetype=javascript.jsx
+autocmd FileType javascript.jsx setlocal shiftwidth=4 tabstop=2 softtabstop=2 expandtab
 "move quick fix window to the right when it open
 autocmd FileType qf wincmd L
 
