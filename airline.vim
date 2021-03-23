@@ -1,3 +1,4 @@
+let g:airline_theme = 'spaceduck'
 let g:airline_enable=1
 let g:airline_powerline_fonts=1
 let g:airline_right_alt_sep = ''

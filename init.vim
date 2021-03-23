@@ -79,6 +79,8 @@ nnoremap <silent> <Leader>- :exe "resize " . (winwidth(0) * 2/3)<CR>
 
 
 call plug#begin("~/.vim/plugged")
+Plug 'sheerun/vim-polyglot'
+Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
 Plug 'SirVer/ultisnips'
 Plug 'mlaursen/vim-react-snippets'
 Plug 'mfussenegger/nvim-dap'
@@ -123,15 +125,7 @@ call plug#end()
 " auto pair fly mode
 let g:AutoPairsFlyMode = 0
 
-"Config Section
-if (has("termguicolors"))
-    set termguicolors
-endif
 syntax enable
-let ayucolor="dark"
-colorscheme ayu
-highlight Cursor guifg=white guibg=yellow
-
 xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
 
 function! ExecuteMacroOverVisualRange()
