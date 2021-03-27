@@ -15,3 +15,5 @@ hi CursorColumn ctermfg=White ctermbg=Yellow cterm=bold guifg=white guibg=#17283
 hi CursorLine guibg=#172833
 highlight Normal guibg=none
 highlight NonText guibg=none
+hi Visual  guibg=#363f68
+" 0f111b

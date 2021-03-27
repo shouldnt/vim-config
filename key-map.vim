@@ -11,10 +11,10 @@ noremap <leader>p "*p
 noremap <leader>P "*P
 
 "disable arrow keys
-nnoremap <Up> :resize +2<CR>
-nnoremap <Down> :resize -2<CR>
-nnoremap <Left> :vertical resize +2<CR>
-nnoremap <Right> :vertical resize -2<CR>
+nnoremap <Up> :resize +4<CR>
+nnoremap <Down> :resize -4<CR>
+nnoremap <Left> :vertical resize +4<CR>
+nnoremap <Right> :vertical resize -4<CR>
 
 nmap <leader>h <C-w>h
 nmap <leader>j <C-w>j
@@ -51,3 +51,5 @@ function! HorizontalScrollMode( call_char )
     endwhile
     echohl None | echo '' | redraws
 endfunction
+
+nnoremap <leader>a :Ack!
