@@ -4,6 +4,39 @@ let mapleader = " "
 "nmap <leader>f <C-^>
 "copy content to system clipboard (like ctrl + c)
 "
+" allow multiple indentation/deindentation in visual mode
+vnoremap < <gv
+vnoremap > >gv
+
+" Speed up scrolling of the viewport slightly
+nnoremap <C-e> 2<C-e>
+nnoremap <C-y> 2<C-y>
+
+" Swap implementations of ` and ' jump to markers
+" By default, ' jumps to the marked line, ` jumps to the marked line and
+" column, so swap them
+nnoremap ' `
+nnoremap ` '
+
+" Use ,d (or ,dd or ,dj or 20,dd) to delete a line without adding it to the
+" yanked stack (also, in visual mode)
+nnoremap <silent> <leader>d "_d
+vnoremap <silent> <leader>d "_d
+
+" Clears the search register
+nnoremap <silent> <leader>/ :nohlsearch<CR>
+
+" --- move around splits {
+" move to and maximize the below split
+map <C-J> <C-W>j<C-W>_
+" move to and maximize the above split
+map <C-K> <C-W>k<C-W>_
+" move to and maximize the left split
+nmap <c-h> <c-w>h<c-w><bar>
+" move to and maximize the right split
+nmap <c-l> <c-w>l<c-w><bar>
+nnoremap <silent> <Leader>+ :exe "resize " . (winwidth(0) * 3/2)<CR>
+nnoremap <silent> <Leader>- :exe "resize " . (winwidth(0) * 2/3)<CR>
 xnoremap <leader>y "*y
 noremap <leader>y "*y
 noremap <leader>Y "*Y
