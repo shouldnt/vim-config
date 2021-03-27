@@ -4,7 +4,7 @@ else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
 nmap <Leader>ee :CocCommand explorer<CR>
-nmap <Leader>ef :call FocusToCocExplorer()<CR>
+nmap <silent> <Leader>ef :call FocusToCocExplorer()<CR>
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)

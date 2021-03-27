@@ -28,6 +28,8 @@ imap <C-{> <C-D>
 
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
+" search for visually selected text
+vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 
 
 " scroll horizontal
@@ -35,6 +37,7 @@ nnoremap <silent> zh :call HorizontalScrollMode('h')<CR>
 nnoremap <silent> zl :call HorizontalScrollMode('l')<CR>
 nnoremap <silent> zH :call HorizontalScrollMode('H')<CR>
 nnoremap <silent> zL :call HorizontalScrollMode('L')<CR>
+
 
 function! HorizontalScrollMode( call_char )
     if &wrap
