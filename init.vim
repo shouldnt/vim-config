@@ -187,6 +187,7 @@ nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 map <C-p> <esc><Leader>ff
 map! <C-p> <esc><Leader>ff
+map! <D-p> <esc><Leader>ff
 lua << EOF
 require('telescope').setup{
 defaults = {
