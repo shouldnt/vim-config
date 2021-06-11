@@ -152,7 +152,7 @@ autocmd FileType xml setlocal shiftwidth=4 softtabstop=2 expandtab
 autocmd FileType javascriptreact setlocal shiftwidth=4 tabstop=2 softtabstop=2 expandtab
 
 autocmd bufnewfile,bufread *.jsx set filetype=javascript.jsx
-autocmd FileType javascript.jsx setlocal shiftwidth=4 tabstop=2 softtabstop=2 expandtab
+autocmd FileType javascript.jsx setlocal shiftwidth=4 expandtab
 "move quick fix window to the right when it open
 autocmd FileType qf wincmd L
 
@@ -197,6 +197,8 @@ sorting_strategy = "ascending"
 }
 }
 EOF
+
+nnoremap <BS> <c-^>
 
 nnoremap <leader>sv :source $MYVIMRC<CR>
 let g:NERDToggleCheckAllLines = 1
